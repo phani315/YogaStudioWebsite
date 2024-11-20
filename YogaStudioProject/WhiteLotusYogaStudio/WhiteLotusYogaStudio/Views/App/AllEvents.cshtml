@@ -1,0 +1,74 @@
+@{
+    ViewData["Title"] = "Classes Page";
+}
+
+@{
+    Layout = "_Layout";
+}
+
+<script src="~/js/allevents.js"></script>
+<div class="main-page-content" id="judges" role="tabpanel">
+    <h4>Manage classes</h4>
+    <div class="col-12 text-end">
+      
+      
+    </div>
+    <div class="col-12 mt-3">
+        <div id="classes" class="table-responsive">
+            <table id="classDetailsTable" class="table table-striped" style="max-width:10%">
+                <thead>
+                    <tr>
+                        <th>Class Name</th>
+                        <th>Instructor</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                        <th>Max Capacity</th>
+                        @* <th>Description</th> *@
+                        <th>Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <!-- Table rows will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+        <h4>Manage Workshops</h4>
+
+    <div class="col-12 mt-3">
+        <div id="classes" class="table-responsive">
+            <table id="workshopDetailsTable" class="table table-striped" style="max-width:10%">
+                        <thead>
+            <tr>
+                <th> Name</th>
+                <th>Instructor</th>
+                @* <th>Start Date</th> *@
+                @* <th>Registration Deadline</th> *@
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Prerequisites</th>
+                <th>Max Capacity</th>
+                <th>Price</th>
+                <th>Equipment Required</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+                <tbody>
+                    <!-- Table rows will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WhiteLotusYogaStudio</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="~/WhiteLotusYogaStudio.styles.css" asp-append-version="true" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4f7+OMtTnSO9gobyCUrT3+UJ/6z5RGbwDk0e8f" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="~/js/config.js"></script>
+    <script src="~/js/sweetalert.js"></script>
+
+    <style>
+        .navbar-nav {
+            margin: 0 auto; /* Center the nav items */
+            display: table; /* Display the items as a table */
+            table-layout: fixed; /* Fixed table layout */
+            width: 100%; /* Full width */
+        }
+
+.navbar{
+    padding-left: 20%;
+        padding-right: 20%;
+        
+
+}
+        .nav-item {
+            display: table-cell; /* Display as a table cell */
+            text-align: center; /* Center align the text */
+        }
+
+        .nav-link.active {
+            font-weight: bold; /* Highlight the active link */
+        }
+
+        .nav-link.highlighted {
+            background-color: lightblue; /* Highlighted background color */
+        }
+        .nav-item.active {
+    background-color: lightblue; /* Highlighted background color */
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="App" asp-action="Index">WhiteLotusYogaStudio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-centre">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item admin-nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="App" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item admin-nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="App" asp-action="Application">Clients</a>
+                        </li>
+                          <li class=" nav-item admin-nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="App" asp-action="Workshops">Workshops</a>
+                        </li>
+                        <li class="nav-item admin-nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="App" asp-action="Classes">Classes</a>
+                        </li>
+                        <li class="nav-item admin-nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="App" asp-action="Instructors">Instructors</a>
+                        </li>
+                        @* <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="App" asp-action="Contact">Contact</a>
+                        </li> *@
+                         <li class="nav-item client-nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="App" asp-action="RegisteredEvents">Registered Events</a>
+                        </li>
+                           <li class="nav-item client-nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="App" asp-action="AllEvents">All Events</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="main-content p-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - WhiteLotusYogaStudio - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link href="~/assets/cdn/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="~/assets/cdn/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="~/assets/cdn/dataTables.bootstrap5.min.js"></script>
+
+
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+$(document).ready(function () {
+    var userRole = localStorage.getItem('userRole');
+debugger
+// Show/hide navigation items based on the user's role
+if (userRole === 'admin') {
+    $('.admin-nav-item').show();
+    $('.client-nav-item').hide();
+} else if (userRole === 'Client') {
+    $('.admin-nav-item').hide();
+    $('.client-nav-item').show();
+} else {
+    // Default to hiding all navigation items if user role is not set
+    $('.admin-nav-item').hide();
+    $('.client-nav-item').hide();
+}
+    var path = window.location.pathname;
+    $('.navbar-nav a').each(function () {
+        var href = $(this).attr('href');
+
+        // Check if the path starts with the href or if it's an exact match
+        if (path === href || path.startsWith(href + '/') || href.startsWith(path)) {
+            $(this).closest('.nav-item').addClass('active');
+
+            // If this is a submenu item, show its parent menu
+            if ($(this).closest('.menu-dropdown').length > 0) {
+                $(this).closest('.menu-dropdown').addClass('show');
+                $(this).closest('.menu-link').addClass('active');
+            }
+        }
+    });
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+@*
+@{
+Layout = null;
+} *@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="~/img/favicon.ico">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="~/lib/font-awesome/css/fontawesome.min.css">
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="~/lib/alert-confirm-loading-web-toast/dist/webToast.min.css" />
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- Custom css -->
+    <link href="~/lib/sweetalert2.min.css" rel="stylesheet" />
+    <!-- Custom JS -->
+    <script src="~/lib/sweetalert2.all.min.js"></script>
+
+    <script src="~/lib/alert-confirm-loading-web-toast/dist/webToast.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/config.js"></script>
+
+    <script src="~/js/login.js"></script>
+
+    <style>
+        /*  .main-flex {
+            background-image: url('/img/login_banner.jpg') !important;
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+        } */
+    </style>
+</head>
+
+
+
+
+<body>
+
+    <div class="loginform">
+        <div class="cont">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="logindiv">
+                        <div class="forms" id="formContainer">
+                            <div class="form-content">
+                                <!-- Login form content -->
+
+
+                                <div class="login-form container">
+                                    <div class="title">
+                                        <center><img src="~/img/logo.svg" style="width:150px; padding-top: 20px;" />
+                                        </center>
+                                    </div>
+<form id="loginForn">
+                                    <div class="form" >
+                                        <div class="input-boxes">
+                                            <div class="text-wrapper">Email ID</div>
+                                            <div class="input-box">
+                                                <input type="text" required id="txtlogId">
+                                            </div>
+
+                                            <div class="text-wrapper">Password</div>
+                                            <div class="input-box">
+                                                <input type="password" required id="txtPassword">
+                                            </div>
+
+                                            <div class="form-check form-switch">
+                                                <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+
+                                            </div>
+
+                                            <div>
+                                                <input class="button input-box inputbutton" type="submit"
+                                                    value="Sign in" id="btnlogIn">
+                                            </div>
+                                            <div class="toggle-button">
+                                                <button class="btn btn-link" onclick="toggleForms()">Sign Up</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+</form>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+                        <div class="forms" id="signupFormContainer" style="display: none;">
+                            <div class="form-content">
+                                <div class="login-form container">
+                                    <div class="title">
+                                        <center><img src="~/img/logo.svg" style="width:150px; " /></center>
+                                    </div>
+                                                <form id="registerForm">
+
+                                    <div class="form">
+                                        <div class="input-boxes">
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="text-wrapper">Studio Name</div>
+                                                    <div class="input-box">
+                                                        <input type="text" required id="StudioName">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="text-wrapper">Email</div>
+                                                    <div class="input-box">
+                                                        <input type="email" required id="Email">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="text-wrapper">Contact Number</div>
+                                                    <div class="input-box">
+                                                        <input type="tel" required id="ContactPhoneNumber">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="text-wrapper">Studio Owner</div>
+                                                    <div class="input-box">
+                                                        <input type="text" required id="StudioOwner">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                
+                                                <div class="col-md-6">
+                                                    <div class="text-wrapper">State</div>
+                                                    <div class="input-box">
+                                                        <input type="text" required id="State">
+                                                    </div>
+                                                </div>
+                                                    <div class="col-md-6">
+                                                    <div class="text-wrapper">ZipCode</div>
+                                                    <div class="input-box">
+                                                        <input type="number" id="zipcode"></text>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                              
+                                                <div class="col-md-6">
+                                                    <div class="text-wrapper">City</div>
+                                                    <div class="input-box">
+                                                        <input type="text" required id="City">
+                                                    </div>
+                                                </div>
+
+                                                  <div class="col-md-6">
+                                                    <div class="text-wrapper">Address</div>
+                                                    <div class="input-box">
+                                                        <input type="text" id="Address"></text>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                              
+                                                @* <div class="col-md-6">
+                                                    <div class="text-wrapper">Description</div>
+                                                    <div class="input-box">
+                                                        <textarea id="txtDescription"></textarea>
+                                                    </div>
+                                                </div> *@
+                                            </div>
+                                            <div>
+                                                <input class="button input-box inputbutton" type="submit"
+                                                    value="Sign Up" id="btnSignUp">
+                                            </div>
+                                        </div>
+                                                                                        </form>
+
+                                    </div>
+
+                                    <div class="toggle-button">
+                                        <button class="btn btn-link" onclick="toggleForms()">Sign in</button>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleForms() {
+            var loginFormContainer = document.getElementById('formContainer');
+            var signupFormContainer = document.getElementById('signupFormContainer');
+
+            if (loginFormContainer.style.display === 'none') {
+                loginFormContainer.style.display = 'block';
+                signupFormContainer.style.display = 'none';
+            } else {
+                loginFormContainer.style.display = 'none';
+                signupFormContainer.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+
+
+
+</html>

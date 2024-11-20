@@ -1,0 +1,239 @@
+@{
+    ViewData["Title"] = "Workshop Page";
+}
+
+@{
+    Layout = "_Layout";
+}
+
+<script src="~/js/workshops.js"></script>
+<div class="main-page-content" id="judges" role="tabpanel">
+    <h4>Manage Workshops</h4>
+    <div class="col-12 text-end">
+        @* <button type="button" class="btn btn-success btn-label rounded-pill right" data-bs-toggle="modal"
+        data-bs-target="#addClassModal" id="btnAddJudgeRoom">
+        <i class="bi bi-plus-circle label-icon align-middle fs-lg ms-2 "></i>Add Class
+        </button> *@
+        <button id="btnClass" type="button" class="btn btn-success rounded-pill btn-label l right btnCreateNewJob"
+            data-bs-toggle="modal" data-bs-target="#addWorkshopModal">
+            <i class="bi bi-plus-circle"></i> Add Workshop
+        </button>
+    </div>
+    <div class="col-12 mt-3">
+        <div id="classes" class="table-responsive">
+            <table id="workshopDetailsTable" class="table table-striped" style="max-width:10%">
+                        <thead>
+            <tr>
+                <th> Name</th>
+                <th>Instructor</th>
+                @* <th>Start Date</th> *@
+                <th>Registration Deadline</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Prerequisites</th>
+                <th>Max Capacity</th>
+                <th>Price</th>
+                <th>Equipment Required</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+                <tbody>
+                    <!-- Table rows will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="modal fade bs-example-modal-lg" id="addWorkshopModal" tabindex="-1" role="dialog"
+    aria-labelledby="addClassModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addClassModalTitle">Add Workshop</h5>
+                <button type="button" class="btn-close btnCloseModel" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                                <form id="addWorkshopForm">
+
+                <div class="row">
+                    <div class="col-md-6 form-content mt-2">
+                        <label for="className">Workshop Name</label> <span class="text-danger">*</span>
+                        <input type="text" class="form-control" id="className" name="className" required>
+                    </div>
+                    <div class="col-md-6 form-content mt-2">
+                    <label for="instructor">Instructor</label> <span class="text-danger">*</span>
+                        <select class="form-select" id="instructor" name="instructor" required>
+                            <!-- Populate with instructor options -->
+                        </select> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 form-content mt-2">
+                        <label for="startDate">Date</label> <span class="text-danger">*</span>
+                        <input type="date" class="form-control" id="startDate" name="startDate" required>
+                    </div>
+                    <div class="col-md-3 form-content mt-2">
+                        <label for="startDate">Registration Deadline</label> <span class="text-danger">*</span>
+                        <input type="date" class="form-control" id="startDate" name="startDate" required>
+                    </div>
+                    <div class="col-md-3 form-content mt-2">
+                        <label for="startTime">Start Time</label> <span class="text-danger">*</span>
+                        <input type="time" class="form-control" id="startTime" name="startTime" required>
+                    </div>
+                    <div class="col-md-3 form-content mt-2">
+                        <label for="endTime">End Time</label> <span class="text-danger">*</span>
+                        <input type="time" class="form-control" id="endTime" name="endTime" required>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-content mt-2">
+                            <label for="Prerequsites">Prerequsites</label> <span class="text-danger">*</span>
+                            <input type="text" class="form-control" id="Prerequsites" name="Prerequsites" required>
+                        </div>
+                        <div class="col-md-3 form-content mt-2">
+                            <label for="maxCapacity">Max Capacity</label> <span class="text-danger">*</span>
+                            <input type="number" class="form-control" id="maxCapacity" name="maxCapacity" required>
+                        </div>
+                        <div class="col-md-3 form-content mt-2">
+                            <label for="price">Price</label> <span class="text-danger">*</span>
+                            <input type="number" class="form-control" id="price" name="price" required>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-content mt-2">
+                            <label for="Equipment">Equipment Required</label>
+                            <input type="text" class="form-control" id="Equipment" name="Equipment">
+                        </div>
+                        <div class="col-md-6 form-content mt-2">
+                            <label for="Cancellation">Cancellation Deadline</label> <span class="text-danger">*</span>
+                            <input type="date" class="form-control" id="Cancellation" name="Cancellation" required>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:void(0);" class="btn btn-link link-success fw-medium btnCloseModel"
+                        data-bs-dismiss="modal"><i class="ri-close-line me-1 align-middle"></i> Close</a>
+                    <button type="submit" class="btn btn-primary" id="btnAddClass">Save</button>
+                </div>
+                                </form>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="modal fade bs-example-modal-lg" id="editWorkshopModal" tabindex="-1" role="dialog"
+    aria-labelledby="editClassModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editClassModalTitle">Edit Workshop</h5>
+                <button type="button" class="btn-close btnCloseModel" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                                <form id="editWorkshopForm">
+
+                <div class="row">
+                    <div class="col-md-6 form-content mt-2">
+                        <label for="editClassName">Workshop Name</label> <span class="text-danger">*</span>
+                        <input type="text" class="form-control" id="editClassName" name="editClassName" required>
+                    </div>
+                    <div class="col-md-6 form-content mt-2">
+                        <label for="editInstructor">Instructor</label> <span class="text-danger">*</span>
+                        <select class="form-select" id="editInstructor" name="editInstructor" required>
+                            <!-- Populate with instructor options -->
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 form-content mt-2">
+                        <label for="editStartDate">Date</label> <span class="text-danger">*</span>
+                        <input type="date" class="form-control" id="editStartDate" name="editStartDate" required>
+                    </div>
+                    <div class="col-md-3 form-content mt-2">
+                        <label for="editRegDeadline">Registration Deadline</label> <span class="text-danger">*</span>
+                        <input type="date" class="form-control" id="editRegDeadline" name="editRegDeadline" required>
+                    </div>
+                    <div class="col-md-3 form-content mt-2">
+                        <label for="editStartTime">Start Time</label> <span class="text-danger">*</span>
+                        <input type="time" class="form-control" id="editStartTime" name="editStartTime" required>
+                    </div>
+                    <div class="col-md-3 form-content mt-2">
+                        <label for="editEndTime">End Time</label> <span class="text-danger">*</span>
+                        <input type="time" class="form-control" id="editEndTime" name="editEndTime" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 form-content mt-2">
+                        <label for="editPrerequisites">Prerequisites</label> <span class="text-danger">*</span>
+                        <input type="text" class="form-control" id="editPrerequisites" name="editPrerequisites" required>
+                    </div>
+                    <div class="col-md-3 form-content mt-2">
+                        <label for="editMaxCapacity">Max Capacity</label> <span class="text-danger">*</span>
+                        <input type="number" class="form-control" id="editMaxCapacity" name="editMaxCapacity" required>
+                    </div>
+                    <div class="col-md-3 form-content mt-2">
+                        <label for="editPrice">Price</label> <span class="text-danger">*</span>
+                        <input type="number" class="form-control" id="editPrice" name="editPrice" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 form-content mt-2">
+                        <label for="editEquipment">Equipment Required</label>
+                        <input type="text" class="form-control" id="editEquipment" name="editEquipment">
+                    </div>
+                    <div class="col-md-6 form-content mt-2">
+                        <label for="editCancellation">Cancellation Deadline</label> <span class="text-danger">*</span>
+                        <input type="date" class="form-control" id="editCancellation" name="editCancellation" required>
+                    </div>
+                </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="javascript:void(0);" class="btn btn-link link-success fw-medium btnCloseModel"
+                    data-bs-dismiss="modal"><i class="ri-close-line me-1 align-middle"></i> Close</a>
+                <button type="submit" class="btn btn-primary" id="btnEditWorkshop">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

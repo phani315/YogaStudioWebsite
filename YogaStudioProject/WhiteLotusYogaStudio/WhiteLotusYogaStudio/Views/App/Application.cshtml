@@ -1,0 +1,146 @@
+﻿@{
+    ViewData["Title"] = "Application Page";
+}
+
+@{
+    Layout = "_Layout";
+}
+
+    <script src="~/js/clients.js"></script>
+
+
+
+<div class="main-page-content" id="judges" role="tabpanel">
+    <h4>Manage Clients</h4>
+    <div class="col-12 text-end">
+        @* <button type="button" class="btn btn-success btn-label rounded-pill right" data-bs-toggle="modal"
+        data-bs-target="#addClassModal" id="btnAddJudgeRoom">
+        <i class="bi bi-plus-circle label-icon align-middle fs-lg ms-2 "></i>Add Class
+        </button> *@
+        <button id="btnClass" type="button" class="btn btn-success rounded-pill btn-label l right btnCreateNewJob"
+            data-bs-toggle="modal" data-bs-target="#addApplicationModal">
+            <i class="bi bi-plus-circle"></i> Add Client
+        </button>
+    </div>
+    <div class="col-12 mt-3">
+        <div id="classes" class="table-responsive">
+            <table id="ClientDetailsTable" class="table table-striped" style="max-width:10%">
+                <thead>
+                    <tr>
+                        <th> Name</th>
+                        <th>Email</th>
+                        <th>Contact Number</th>
+                        <th>Gender</th>
+                       
+                                               <th></th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table rows will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-md" id="addApplicationModal" tabindex="-1" role="dialog"
+    aria-labelledby="addClassModalTitle" aria-hidden="true">
+
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addModalTitle">Add Client</h5>
+                <button type="button" class="btn-close btnCloseModel" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="addClientForm">
+                    <div class="row">
+                        <div class="col-md-12 form-content mt-2">
+                            <label for="Name">Name</label> <span class="text-danger">*</span>
+                            <input type="text" class="form-control" id="Name" name="Name" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 form-content mt-2">
+                            <label for="email">Email</label> <span class="text-danger">*</span>
+                            <input type="text" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="row"></div>
+                        <div class="col-md-12 form-content mt-2">
+                            <label for="phone">Phone Number</label> <span class="text-danger">*</span>
+                            <input type="tel" class="form-control" id="PhoneNumber" name="phone" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 form-content mt-2">
+
+                            Gender <span class="text-danger">*</span><br>
+                            <label><input type="radio" name="Gender" value="Male" required> Male</label>
+                            <label><input type="radio" name="Gender" value="Female" required> Female</label>
+                            <label><input type="radio" name="Gender" value="Others" required> Others</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer mt-2">
+                        <a href="javascript:void(0);" class="btn btn-link link-success fw-medium btnCloseModel"
+                            data-bs-dismiss="modal"><i class="ri-close-line me-1 align-middle"></i> Close</a>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </div><!-- /.modal-dialog -->
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade bs-example-modal-md" id="editClientModal" tabindex="-1" role="dialog"
+    aria-labelledby="editClientModalTitle" aria-hidden="true">
+
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editClientModalTitle">Edit Client</h5>
+                <button type="button" class="btn-close btnCloseModel" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editClientForm">
+                    <div class="row">
+                        <div class="col-md-12 form-content mt-2">
+                            <label for="editName">Name</label> <span class="text-danger">*</span>
+                            <input type="text" class="form-control" id="editName" name="editName" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 form-content mt-2">
+                            <label for="editEmail">Email</label> <span class="text-danger">*</span>
+                            <input type="text" class="form-control" id="editEmail" name="editEmail" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 form-content mt-2">
+                            <label for="editPhone">Phone Number</label> <span class="text-danger">*</span>
+                            <input type="tel" class="form-control" id="editPhone" name="editPhone" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 form-content mt-2">
+                            Gender <span class="text-danger">*</span><br>
+                            <label><input type="radio" name="editGender" value="Male" checked> Male</label>
+                            <label><input type="radio" name="editGender" value="Female"> Female</label>
+                            <label><input type="radio" name="editGender" value="Others"> Others</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer mt-2">
+                <a href="javascript:void(0);" class="btn btn-link link-success fw-medium btnCloseModel"
+                    data-bs-dismiss="modal"><i class="ri-close-line me-1 align-middle"></i> Close</a>
+                <button type="submit" class="btn btn-primary" id="btnEditClient">Save Changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+

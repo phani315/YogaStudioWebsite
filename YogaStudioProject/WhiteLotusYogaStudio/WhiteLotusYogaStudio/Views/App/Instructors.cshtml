@@ -1,0 +1,151 @@
+﻿@{
+    ViewData["Title"] = "Instructors Page";
+}
+
+
+@{
+    Layout = "_Layout";
+}
+
+    <script src="~/js/instructor.js"></script>
+
+
+
+
+
+
+
+<div class="main-page-content" id="judges" role="tabpanel">
+    <h4>Manage Clients</h4>
+    <div class="col-12 text-end">
+        @* <button type="button" class="btn btn-success btn-label rounded-pill right" data-bs-toggle="modal"
+        data-bs-target="#addClassModal" id="btnAddJudgeRoom">
+        <i class="bi bi-plus-circle label-icon align-middle fs-lg ms-2 "></i>Add Class
+        </button> *@
+        <button id="btnClass" type="button" class="btn btn-success rounded-pill btn-label l right btnCreateNewJob"
+            data-bs-toggle="modal" data-bs-target="#addInstructorModal">
+            <i class="bi bi-plus-circle"></i> Add Instructor
+        </button>
+    </div>
+    <div class="col-12 mt-3">
+        <div id="classes" class="table-responsive">
+            <table id="instructorDetailsTable" class="table table-striped" style="max-width:10%">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Contact number</th>
+                        <th>Years of experience</th>
+                    
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table rows will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade bs-example-modal-md" id="addInstructorModal" tabindex="-1" role="dialog"
+    aria-labelledby="addClassModalTitle" aria-hidden="true">
+
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addModalTitle">Add Instructor</h5>
+                <button type="button" class="btn-close btnCloseModel" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal fade bs-example-modal-lg" id="addInstructorModal" tabindex="-1" role="dialog"
+                    aria-labelledby="addInstructorModalTitle" aria-hidden="true">
+
+                </div>
+                <form id="addInstructorForm">
+                <div class="row">
+                    <div class="col-md-12 form-content mt-2">
+                        <label for="Name">Name</label> <span class="text-danger">*</span>
+                        <input type="text" class="form-control" id="Name" name="Name" required>
+                    </div>
+
+                </div>
+
+                    <div class="row">
+                        <div class="col-md-12 form-content mt-2">
+                            <label for="email">Email</label> <span class="text-danger">*</span>
+                            <input type="text" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="row"></div>
+                        <div class="col-md-12 form-content mt-2">
+                            <label for="Phone Number">Phone Number</label> <span class="text-danger">*</span>
+                            <input type="phone number" class="form-control" id="PhoneNumber" name="Phone Number" required>
+                        </div>
+                    </div>
+               <div class="col-md-12 form-content mt-2">
+                            <label for="yearsOfExperience">Years of experience</label> <span class="text-danger">*</span>
+                            <input type="number" class="form-control" id="yearsOfExperience" name="yearsOfExperience" required>
+                        </div>
+                    <div class="modal-footer mt-2">
+                        <a href="javascript:void(0);" class="btn btn-link link-success fw-medium btnCloseModel"
+                            data-bs-dismiss="modal"><i class="ri-close-line me-1 align-middle"></i> Close</a>
+                        <button type="submit" class="btn btn-primary" id="btnAddClass">Save</button>
+                    </div>
+                    </form>
+            </div><!-- /.modal-dialog -->
+        </div>
+    </div>
+
+</div>
+
+<div class="modal fade" id="editInstructorModal" tabindex="-1" role="dialog" aria-labelledby="editInstructorModalTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editModalTitle">Edit Instructor</h5>
+                <button type="button" class="btn-close btnCloseModel" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                                <form id="editInstructorForm">
+
+                <div class="row">
+                    <div class="col-md-12 form-content mt-2">
+                        <label for="editName">Name</label> <span class="text-danger">*</span>
+                        <input type="text" class="form-control" id="editName" name="editName" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 form-content mt-2">
+                        <label for="editEmail">Email</label> <span class="text-danger">*</span>
+                        <input type="email" class="form-control" id="editEmail" name="editEmail" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 form-content mt-2">
+                        <label for="editPhoneNumber">Phone Number</label> <span class="text-danger">*</span>
+                        <input type="tel" class="form-control" id="editPhoneNumber" name="editPhoneNumber" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 form-content mt-2">
+                        <label for="editYearsOfExperience">Years of experience</label> <span
+                            class="text-danger">*</span>
+                        <input type="number" class="form-control" id="editYearsOfExperience" name="editYearsOfExperience" required>
+                    </div>
+                </div>
+                            </form>
+
+            </div>
+            <div class="modal-footer">
+                <a href="javascript:void(0);" class="btn btn-link link-success fw-medium btnCloseModel"
+                    data-bs-dismiss="modal"><i class="ri-close-line me-1 align-middle"></i> Close</a>
+                <button type="submit" class="btn btn-primary" id="btnEditInstructor">Save Changes</button>
+            </div>
+        </div>
+    </div>
+</div>

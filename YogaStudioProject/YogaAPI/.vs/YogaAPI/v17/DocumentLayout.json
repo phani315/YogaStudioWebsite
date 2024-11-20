@@ -1,0 +1,200 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Asus\\Desktop\\YogaAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{28B08EF4-6855-4701-B4A0-F753752E2A30}|YogaAPI\\YogaAPI.csproj|c:\\users\\asus\\desktop\\yogaapi\\yogaapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{28B08EF4-6855-4701-B4A0-F753752E2A30}|YogaAPI\\YogaAPI.csproj|solutionrelative:yogaapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28B08EF4-6855-4701-B4A0-F753752E2A30}|YogaAPI\\YogaAPI.csproj|c:\\users\\asus\\desktop\\yogaapi\\yogaapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28B08EF4-6855-4701-B4A0-F753752E2A30}|YogaAPI\\YogaAPI.csproj|solutionrelative:yogaapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28B08EF4-6855-4701-B4A0-F753752E2A30}|YogaAPI\\YogaAPI.csproj|c:\\users\\asus\\desktop\\yogaapi\\yogaapi\\yogaapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{28B08EF4-6855-4701-B4A0-F753752E2A30}|YogaAPI\\YogaAPI.csproj|solutionrelative:yogaapi\\yogaapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28B08EF4-6855-4701-B4A0-F753752E2A30}|YogaAPI\\YogaAPI.csproj|c:\\users\\asus\\desktop\\yogaapi\\yogaapi\\controllers\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28B08EF4-6855-4701-B4A0-F753752E2A30}|YogaAPI\\YogaAPI.csproj|solutionrelative:yogaapi\\controllers\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE8BAF0D-806A-41EA-8870-54FF91FBA4B2}|REPO\\REPO.csproj|c:\\users\\asus\\desktop\\yogaapi\\repo\\repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE8BAF0D-806A-41EA-8870-54FF91FBA4B2}|REPO\\REPO.csproj|solutionrelative:repo\\repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1E20DE1-35F1-40B2-8416-777B506CAD75}|Entity\\Entity.csproj|c:\\users\\asus\\desktop\\yogaapi\\entity\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1E20DE1-35F1-40B2-8416-777B506CAD75}|Entity\\Entity.csproj|solutionrelative:entity\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE8BAF0D-806A-41EA-8870-54FF91FBA4B2}|REPO\\REPO.csproj|c:\\users\\asus\\desktop\\yogaapi\\repo\\irepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE8BAF0D-806A-41EA-8870-54FF91FBA4B2}|REPO\\REPO.csproj|solutionrelative:repo\\irepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28B08EF4-6855-4701-B4A0-F753752E2A30}|YogaAPI\\YogaAPI.csproj|c:\\users\\asus\\desktop\\yogaapi\\yogaapi\\controllers\\yogacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28B08EF4-6855-4701-B4A0-F753752E2A30}|YogaAPI\\YogaAPI.csproj|solutionrelative:yogaapi\\controllers\\yogacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28B08EF4-6855-4701-B4A0-F753752E2A30}|YogaAPI\\YogaAPI.csproj|c:\\users\\asus\\desktop\\yogaapi\\yogaapi\\yogaapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{28B08EF4-6855-4701-B4A0-F753752E2A30}|YogaAPI\\YogaAPI.csproj|solutionrelative:yogaapi\\yogaapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D14F33-EB69-4D13-9DE2-B959076F25D4}|DAO\\DAO.csproj|c:\\users\\asus\\desktop\\yogaapi\\dao\\dao.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E7D14F33-EB69-4D13-9DE2-B959076F25D4}|DAO\\DAO.csproj|solutionrelative:dao\\dao.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D14F33-EB69-4D13-9DE2-B959076F25D4}|DAO\\DAO.csproj|c:\\users\\asus\\desktop\\yogaapi\\dao\\dataaccesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D14F33-EB69-4D13-9DE2-B959076F25D4}|DAO\\DAO.csproj|solutionrelative:dao\\dataaccesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "YogaAPI.http",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\YogaAPI\\YogaAPI\\YogaAPI.http",
+              "RelativeDocumentMoniker": "YogaAPI\\YogaAPI.http",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\YogaAPI\\YogaAPI\\YogaAPI.http",
+              "RelativeToolTip": "YogaAPI\\YogaAPI.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-03-27T01:50:18.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\YogaAPI\\YogaAPI\\Program.cs",
+              "RelativeDocumentMoniker": "YogaAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\YogaAPI\\YogaAPI\\Program.cs",
+              "RelativeToolTip": "YogaAPI\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T12:08:36.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "YogaController.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\YogaAPI\\YogaAPI\\Controllers\\YogaController.cs",
+              "RelativeDocumentMoniker": "YogaAPI\\Controllers\\YogaController.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\YogaAPI\\YogaAPI\\Controllers\\YogaController.cs",
+              "RelativeToolTip": "YogaAPI\\Controllers\\YogaController.cs",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAmwHcAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T19:40:07.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Client.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\YogaAPI\\YogaAPI\\Controllers\\Client.cs",
+              "RelativeDocumentMoniker": "YogaAPI\\Controllers\\Client.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\YogaAPI\\YogaAPI\\Controllers\\Client.cs",
+              "RelativeToolTip": "YogaAPI\\Controllers\\Client.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAiwCIAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T19:40:32.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Repo.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\YogaAPI\\REPO\\Repo.cs",
+              "RelativeDocumentMoniker": "REPO\\Repo.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\YogaAPI\\REPO\\Repo.cs",
+              "RelativeToolTip": "REPO\\Repo.cs",
+              "ViewState": "AQIAANIBAAAAAAAAAAAiwN0BAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T19:27:37.949Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IRepo.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\YogaAPI\\REPO\\IRepo.cs",
+              "RelativeDocumentMoniker": "REPO\\IRepo.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\YogaAPI\\REPO\\IRepo.cs",
+              "RelativeToolTip": "REPO\\IRepo.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAIwDkAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T19:23:25.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Entity.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\YogaAPI\\Entity\\Entity.cs",
+              "RelativeDocumentMoniker": "Entity\\Entity.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\YogaAPI\\Entity\\Entity.cs",
+              "RelativeToolTip": "Entity\\Entity.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAA5wA8AAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T18:51:21.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\YogaAPI\\YogaAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "YogaAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\YogaAPI\\YogaAPI\\appsettings.json*",
+              "RelativeToolTip": "YogaAPI\\appsettings.json*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-25T17:48:14.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DataAccessLayer.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\YogaAPI\\DAO\\DataAccessLayer.cs",
+              "RelativeDocumentMoniker": "DAO\\DataAccessLayer.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\YogaAPI\\DAO\\DataAccessLayer.cs",
+              "RelativeToolTip": "DAO\\DataAccessLayer.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAuwAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T17:47:32.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DAO.csproj",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\YogaAPI\\DAO\\DAO.csproj",
+              "RelativeDocumentMoniker": "DAO\\DAO.csproj",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\YogaAPI\\DAO\\DAO.csproj",
+              "RelativeToolTip": "DAO\\DAO.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-25T17:44:35.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "YogaAPI.csproj",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\YogaAPI\\YogaAPI\\YogaAPI.csproj",
+              "RelativeDocumentMoniker": "YogaAPI\\YogaAPI.csproj",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\YogaAPI\\YogaAPI\\YogaAPI.csproj",
+              "RelativeToolTip": "YogaAPI\\YogaAPI.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-25T17:44:00.098Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
