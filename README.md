@@ -7,20 +7,22 @@ The **Yoga Studio Website** is an integrated software solution designed to enhan
 
 ## **System Architecture**
 ### **Frontend**
-- **Technology Stack:** React.js with Tailwind CSS for a responsive UI.
-- **State Management:** Redux Toolkit for managing global state.
-- **Authentication:** JWT-based authentication with OAuth support.
-- **Performance Optimization:** Code splitting and lazy loading.
+- **Technology Stack:** ASP.NET Core MVC with Razor Views for server-side rendering.
+- **JavaScript Integration:** Custom JavaScript with jQuery for dynamic UI interactions.
+- **Styling:** Bootstrap for responsive design.
+- **State Management:** Minimal client-side state; managed via server-side rendering.
+- **Authentication:** Cookie-based authentication with ASP.NET Identity.
+- **Performance Optimization:** Server-side caching and AJAX for dynamic updates.
 
 ### **Backend**
-- **Framework:** Node.js with Express.js for RESTful API services.
-- **Database:** MySQL with Sequelize ORM for structured data management.
+- **Framework:** .NET 8.0 with ASP.NET Core for RESTful API services.
+- **Database:** MySQL with Entity Framework Core for ORM-based data management.
 - **Caching:** Redis for session management and query optimization.
-- **Security:** HTTPS, CORS, input validation, and OWASP security practices.
+- **Security:** HTTPS, CORS, input validation, and OWASP security best practices.
 
 ### **Infrastructure & Deployment**
 - **Cloud Provider:** AWS (Amazon Web Services)
-- **Hosting Services:** EC2 instances for backend, S3 + CloudFront for frontend.
+- **Hosting Services:** EC2 instances for backend, S3 + CloudFront for frontend assets.
 - **Containerization:** Dockerized microservices orchestrated by Kubernetes (EKS).
 - **CI/CD:** Automated builds, testing, and deployment using GitHub Actions.
 
@@ -44,8 +46,8 @@ The **Yoga Studio Website** is an integrated software solution designed to enhan
 
 ### **Continuous Integration & Deployment (CI/CD)**
 - **CI:**
-  - Linting and static code analysis with ESLint & Prettier.
-  - Automated unit tests with Jest and Mocha.
+  - Linting and static code analysis with SonarQube.
+  - Automated unit tests with xUnit for .NET 8.0.
   - Build artifacts stored in AWS S3.
 - **CD:**
   - Blue-Green Deployments to minimize downtime.
@@ -111,18 +113,22 @@ The **Yoga Studio Website** is an integrated software solution designed to enhan
    ```
 3. Install dependencies:
    ```sh
-   npm install
+   dotnet restore
    ```
-4. Start the development server:
+4. Build the project:
    ```sh
-   npm run dev
+   dotnet build
+   ```
+5. Start the development server:
+   ```sh
+   dotnet run
    ```
 
 ---
 
 ## **Contribution Guidelines**
 - Follow the **Git branching strategy** (`feature/`, `bugfix/`, `hotfix/` branches).
-- Code should comply with **ESLint & Prettier formatting**.
+- Code should comply with **C# coding standards and SonarQube analysis**.
 - Raise PRs with detailed descriptions and request reviews before merging.
 
 ---
@@ -131,5 +137,3 @@ The **Yoga Studio Website** is an integrated software solution designed to enhan
 This project is licensed under the MIT License.
 
 ---
-
-
