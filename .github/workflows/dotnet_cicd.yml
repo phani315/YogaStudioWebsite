@@ -10,7 +10,7 @@ on:
 
 env:
   DOTNET_VERSION: 8.0.x
-  PROJECT_DIR: YogaStudioProject/YogaAPI.csproj
+  PROJECT_DIR: YogaStudioProject/YogaAPI/YogaAPI.csproj
   REGISTRY: docker.io
   IMAGE_NAME: yoga_studio/app
 
