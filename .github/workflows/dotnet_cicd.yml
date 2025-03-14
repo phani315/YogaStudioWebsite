@@ -1,0 +1,36 @@
+name: .NET Fullstack CI/CD
+
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - develop
+
+env:
+  DOTNET_VERSION: 8.0.x
+  PROJECT_DIR: YogaStudioProject
+  REGISTRY: docker.io
+  IMAGE_NAME: yoga_studio/app
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Setup .NET
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      # Restore and Build .NET Project
+      - name: Restore Dependencies
+        run: dotnet restore ${{ env.PROJECT_DIR }}
+
+      - name: Build application
+        run: dotnet build ${{ env.PROJECT_DIR }} --configuration Release --no-restore
+
